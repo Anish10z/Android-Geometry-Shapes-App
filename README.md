@@ -36,11 +36,18 @@ This is a simple Android application that demonstrates the use of basic geometri
 4. Press the calculate button to see the results.
 ### Screenshots
 #### Landing Interface
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+
+<img src="screenshots/IMG_20240710_182824.jpg" alt="IMG_20240710_182824.jpg" width="270" height="540">
+
 #### Sliding Drawwer 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+
+<img src="screenshots/IMG_20240710_182808.jpg" alt="IMG_20240710_182808.jpg" width="270" height="540">
+
+
 #### calculation
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+
+<img src="screenshots/Screenshot_2024_0710_182607.jpg" alt="Screenshot_2024_0710_182607.jpg" width="270" height="540">
+
 ### Example Code
 #### circle.java
 ``` bash
