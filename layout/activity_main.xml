@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F1F9"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    tools:openDrawer="start">
+
+ <com.google.android.material.navigation.NavigationView
+     android:id="@+id/nav_view"
+     android:layout_width="wrap_content"
+     android:layout_height="match_parent"
+     android:layout_gravity="start"
+     app:headerLayout="@layout/header"
+     app:menu="@menu/main_menu"></com.google.android.material.navigation.NavigationView>
+
+ <ScrollView
+     android:layout_width="match_parent"
+     android:layout_height="match_parent">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+   <include
+       android:id="@+id/Toolbar"
+       layout="@layout/toolbar"
+       tools:layout_editor_absoluteX="-46dp"
+       tools:layout_editor_absoluteY="5dp"></include>
+
+   <TextView
+       android:id="@+id/textView2"
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       android:layout_marginStart="16dp"
+       android:layout_marginTop="24dp"
+       android:fontFamily="@font/baloo"
+       android:text="MEASURE"
+       android:textColor="#06536A"
+       android:textSize="30sp"
+       app:layout_constraintEnd_toStartOf="@+id/imageView"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/Toolbar" />
+
+   <TextView
+       android:id="@+id/textView3"
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       android:layout_marginStart="16dp"
+       android:text="Feel Free to Use"
+       android:textColor="#06536A"
+       android:textSize="18.3sp"
+       app:layout_constraintEnd_toStartOf="@+id/imageView"
+       app:layout_constraintHorizontal_bias="0.0"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+   <ImageView
+       android:id="@+id/imageView"
+       android:layout_width="0dp"
+       android:layout_height="160dp"
+       android:layout_marginEnd="16dp"
+       app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toEndOf="@+id/textView2"
+       app:layout_constraintTop_toBottomOf="@+id/Toolbar"
+       app:srcCompat="@mipmap/picture_round" />
+
+   <LinearLayout
+       android:id="@+id/linearLayout2"
+       android:layout_width="0dp"
+       android:layout_height="175dp"
+       android:orientation="horizontal"
+       android:padding="10dp"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="1.0"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_square"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:backgroundTint="#FFFFFF"
+        app:cardElevation="10dp"
+        app:cardMaxElevation="10dp">
+
+     <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent">
+
+      <TextView
+          android:id="@+id/textView_square"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/square"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="8dp"
+          android:fontFamily="@font/aclonica"
+          android:text="SQUARE"
+          android:textColor="#A111C9"
+          android:textSize="20sp" />
+
+      <ImageView
+          android:id="@+id/square"
+          android:layout_width="85dp"
+          android:layout_height="85dp"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="12dp"
+          app:srcCompat="@drawable/square_shape_svgrepo_com" />
+     </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_triangle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:backgroundTint="#FFFFFF"
+        app:cardElevation="10dp"
+        app:cardMaxElevation="10dp">
+
+     <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent">
+
+      <TextView
+          android:id="@+id/textview_triangle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/triangle"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="8dp"
+          android:fontFamily="@font/aclonica"
+          android:text="TRIANGLE"
+          android:textColor="#DCAA16"
+          android:textSize="20sp" />
+
+      <ImageView
+          android:id="@+id/triangle"
+          android:layout_width="85dp"
+          android:layout_height="85dp"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="12dp"
+          app:srcCompat="@drawable/triangle_svgrepo_com" />
+     </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+   </LinearLayout>
+
+   <LinearLayout
+       android:id="@+id/linearLayout3"
+       android:layout_width="0dp"
+       android:layout_height="175dp"
+       android:orientation="horizontal"
+       android:padding="10dp"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.0"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_hexagon"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:backgroundTint="#FFFFFF"
+        app:cardElevation="10dp"
+        app:cardMaxElevation="10dp">
+
+     <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent">
+
+      <TextView
+          android:id="@+id/textView_hexagon"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/hexagon"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="8dp"
+          android:fontFamily="@font/aclonica"
+          android:text="HEXAGON"
+          android:textColor="#12F5C0"
+          android:textSize="20sp" />
+
+      <ImageView
+          android:id="@+id/hexagon"
+          android:layout_width="85dp"
+          android:layout_height="85dp"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="12dp"
+          app:srcCompat="@drawable/hexagon_fill_svgrepo_com" />
+     </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_pentagon"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:backgroundTint="#FFFFFF"
+        app:cardElevation="10dp"
+        app:cardMaxElevation="10dp">
+
+     <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent">
+
+      <TextView
+          android:id="@+id/textView_pentagon"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/pentagon"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="8dp"
+          android:fontFamily="@font/aclonica"
+          android:text="PENTAGON"
+          android:textColor="#2A7DF5"
+          android:textSize="20sp" />
+
+      <ImageView
+          android:id="@+id/pentagon"
+          android:layout_width="85dp"
+          android:layout_height="85dp"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="12dp"
+          app:srcCompat="@drawable/pentagon_svgrepo_com" />
+     </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+   </LinearLayout>
+
+   <LinearLayout
+       android:layout_width="0dp"
+       android:layout_height="175dp"
+       android:orientation="horizontal"
+       android:padding="10dp"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="1.0"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_circle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:backgroundTint="#FFFFFF"
+        app:cardElevation="10dp"
+        app:cardMaxElevation="10dp">
+
+     <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent">
+
+      <TextView
+          android:id="@+id/textView_circle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/circle"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="8dp"
+          android:fontFamily="@font/aclonica"
+          android:text="CIRCLE"
+          android:textColor="#9BEB07"
+          android:textSize="20sp" />
+
+      <ImageView
+          android:id="@+id/circle"
+          android:layout_width="85dp"
+          android:layout_height="85dp"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="12dp"
+          app:srcCompat="@drawable/shape_circle_svgrepo_com" />
+     </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_rectangle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:backgroundTint="#FFFFFF"
+        app:cardElevation="10dp"
+        app:cardMaxElevation="10dp">
+
+     <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent">
+
+      <TextView
+          android:id="@+id/textView_rectangle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/rectangle"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="8dp"
+          android:fontFamily="@font/aclonica"
+          android:text="RECTANGLE"
+          android:textColor="#F006BD"
+          android:textSize="20sp" />
+
+      <ImageView
+          android:id="@+id/rectangle"
+          android:layout_width="85dp"
+          android:layout_height="85dp"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="12dp"
+          app:srcCompat="@drawable/rectangle_f_svgrepo_com" />
+     </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+   </LinearLayout>
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+ </ScrollView>
+</androidx.drawerlayout.widget.DrawerLayout>
